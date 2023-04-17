@@ -21,7 +21,7 @@ apiVersion: apps/v1
 kind: Deployment
 metadata:
   name: redis-server
-  namespace: yelb
+  namespace: flux-yelb-app
 spec:
   selector:
     matchLabels:
