@@ -6,4 +6,4 @@ resources:
 - db.yaml
 - appserver.yaml
 - ui.yaml
-# - network-policy-ingress.yaml
+- network-policy-ingress.yaml

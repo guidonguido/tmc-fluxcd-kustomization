@@ -32,3 +32,5 @@ spec:
   - from: []
     ports:
     - port: 80
+  egress:
+  - to: []
