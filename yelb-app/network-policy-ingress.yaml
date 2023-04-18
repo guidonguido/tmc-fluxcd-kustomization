@@ -1,0 +1,34 @@
+kind: NetworkPolicy
+apiVersion: networking.k8s.io/v1
+metadata:
+  name: yelb-allow-intra-namespace
+  namespace: flux-yelb-app
+spec:
+  podSelector:
+    matchLabels:
+      layer: backend
+    ingress:
+    - from:
+      - namespaceSelector:
+          matchLabels:
+            name: flux-yelb-app
+
+---
+
+kind: NetworkPolicy
+apiVersion: networking.k8s.io/v1
+metadata:
+  name: yelb-allow-ui
+  namespace: flux-yelb-app
+spec:
+  podSelector:
+    matchLabels:
+      tier: frontend
+  ingress:
+  - from:
+      - namespaceSelector:
+          matchLabels:
+            name: flux-yelb-app
+  - from: []
+    ports:
+    - port: 80

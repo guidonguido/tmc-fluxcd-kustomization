@@ -6,6 +6,7 @@ metadata:
   labels:
     app: yelb-appserver
     tier: middletier
+    layer: backend
 spec:
   type: ClusterIP
   ports:
@@ -13,6 +14,7 @@ spec:
   selector:
     app: yelb-appserver
     tier: middletier
+    layer: backend
 
 ---
 
@@ -27,11 +29,13 @@ spec:
     matchLabels: 
       app: yelb-appserver
       tier: middletier
+      layer: backend
   template:
     metadata:
       labels:
         app: yelb-appserver
         tier: middletier
+        layer: backend
     spec:
       containers:
       - name: yelb-appserver
