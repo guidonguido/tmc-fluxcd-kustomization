@@ -7,11 +7,11 @@ spec:
   podSelector:
     matchLabels:
       layer: backend
-    ingress:
-    - from:
-      - namespaceSelector:
-          matchLabels:
-            name: flux-yelb-app
+  ingress:
+  - from:
+    - namespaceSelector:
+        matchLabels:
+          name: flux-yelb-app
 
 ---
 
