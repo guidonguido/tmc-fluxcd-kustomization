@@ -6,7 +6,7 @@ metadata:
 spec:
   routes:
    - kind: Rule
-     match: Host(\`whoami.rguido-tanzulab2.corp.local\`)
+     match: Host(`whoami.rguido-tanzulab2.corp.local`)
      services:
         - kind: Service
           name: whoamiv1
