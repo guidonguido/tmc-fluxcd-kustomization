@@ -22,7 +22,7 @@ spec:
 ---
 
 # Declaring the user list
-apiVersion: middlewares.traefik.containo.us
+apiVersion: traefik.containo.us/v1alpha1
 kind: Middleware
 metadata:
   name: yelb-ui-basic-auth
@@ -42,8 +42,6 @@ metadata:
   name: authsecret
   namespace: flux-yelb-app
 data:
-  users: |2
-    dXNlcjokYXByMSRmWlphV3ltaCQyQzU3TE5jVzc3bmE5QjRvMlpzZzQwCgo=
+  users: |
     YWRtaW46JGFwcjEkbzRBMDhsdWEkL3Y4NjRaUXl6RWVEYkJUbFl3dkV2LwoK
 # admin:VMware1!
-# user:password
