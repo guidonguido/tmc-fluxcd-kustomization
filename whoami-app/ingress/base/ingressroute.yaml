@@ -8,7 +8,7 @@ spec:
     - web
   routes:
     - kind: Rule
-      match: Host(\`fix.me\`)
+      match: Host(\`fix.me\`) # The DNS server must be configured to resolve this hostname to the IP address of the Traefik instance.
       services:
         - kind: Service
           name: whoamiv1

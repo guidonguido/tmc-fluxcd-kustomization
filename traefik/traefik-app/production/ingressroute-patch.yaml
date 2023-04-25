@@ -6,7 +6,7 @@ metadata:
 spec:
   routes:
   - kind: Rule
-    match: Host(`traefik.rguido-tanzulab2.corp.local`)
+    match: Host(`traefik.rguido-tanzulab2.corp.local`) # The DNS server must be configured to resolve this hostname to the IP address of the Traefik instance.
     services:
         - kind: Service
           name: traefik-dashboard
