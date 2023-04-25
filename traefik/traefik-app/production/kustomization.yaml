@@ -8,3 +8,4 @@ resources:
 
 patchesStrategicMerge:
   - traefik-patch.yaml
+  - ingressroute-patch.yaml

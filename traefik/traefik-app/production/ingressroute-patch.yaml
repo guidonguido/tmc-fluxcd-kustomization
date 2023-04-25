@@ -1,0 +1,13 @@
+---
+apiVersion: traefik.containo.us/v1alpha1
+kind: IngressRoute
+metadata:
+  name: traefik-dashboard
+spec:
+  routes:
+  - kind: Rule
+    match: Host(`traefik.rguido-tanzulab2.corp.local`)
+    services:
+        - kind: Service
+          name: traefik-dashboard
+          port: 80

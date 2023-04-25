@@ -1,0 +1,17 @@
+---
+apiVersion: traefik.containo.us/v1alpha1
+kind: IngressRoute
+metadata:
+  name: traefik-dashboard
+spec:
+  entryPoints:
+    - web
+  routes:
+    - kind: Rule
+      match: Host(\`fix.me\`)
+      services:
+        - kind: Service
+          name: traefik-dashboard
+          port: 9000
+  # tls:
+  #   certResolver: myresolver

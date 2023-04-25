@@ -5,3 +5,5 @@ resources:
   - rbac.yaml
   - traefik.yaml
   - svc.yaml
+  - svc-dashboard.yaml
+  - ingressroute.yaml
