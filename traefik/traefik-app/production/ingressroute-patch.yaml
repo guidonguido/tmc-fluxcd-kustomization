@@ -10,4 +10,4 @@ spec:
     services:
         - kind: Service
           name: traefik-dashboard
-          port: 80
+          port: 9000
